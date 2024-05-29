@@ -22,8 +22,9 @@ jobs:
             python3 fastapi_notify.py
 
 workflows:
-  version: 2
-  nightly:
+  notify_app:
+    jobs:
+      - build
     triggers:
       - schedule:
           cron: "* 1,3,6,9,12,15,18,21,23 * * *"
@@ -31,5 +32,3 @@ workflows:
             branches:
               only:
                 - main
-    jobs:
-      - build
