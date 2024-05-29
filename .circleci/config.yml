@@ -23,9 +23,6 @@ jobs:
 
 workflows:
   version: 2
-  build-and-test:
-    jobs:
-      - build
   nightly:
     triggers:
       - schedule:
@@ -34,3 +31,5 @@ workflows:
             branches:
               only:
                 - main
+    jobs:
+      - build
