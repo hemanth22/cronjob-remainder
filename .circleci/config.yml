@@ -20,6 +20,10 @@ jobs:
           name: Send Message notification to OpenShift
           command: |
             python3 fastapi_notify.py
+      - run:
+          name: Send Message notification to OpenShift Serverless Function
+          command: |
+            python3 fastapi_notify_water.py
 
 workflows:
   notify_app:
