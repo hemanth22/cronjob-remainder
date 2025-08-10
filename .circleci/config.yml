@@ -28,6 +28,18 @@ jobs:
           name: Timesheet alert
           command: |
             python3 fastapi_timesheet.py
+      - run:
+          name: Capital Market
+          command: |
+            python3 fastapi_CapitalMarket.py
+      - run:
+          name: Stock Edge
+          command: |
+            python3 fastapi_stockedge.py
+      - run:
+          name: Soul alert
+          command: |
+            python3 fastapi_soul.py
 
 workflows:
   notify_app:
