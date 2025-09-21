@@ -41,6 +41,15 @@ jobs:
           command: |
             python3 fastapi_soul.py
 
+      - run:
+          name: Multipe alert
+          command: |
+            python3 fastapi_multipe.py
+      - run:
+          name: ValuePickr
+          command: |
+            python3 fastapi_valuepickr.py
+
 workflows:
   notify_app:
     jobs:

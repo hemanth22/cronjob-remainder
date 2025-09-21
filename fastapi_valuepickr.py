@@ -11,7 +11,7 @@ FASTAPI_WEBHOOK_SERVERLESS = os.environ.get('FASTAPI_WEBHOOK_SERVERLESS')
 
 payload = json.dumps({
   "source": "circleci",
-  "message": "check stockedge.com app for latest stock updates or analysis",
+  "message": "check https://forum.valuepickr.com/ app for latest stock updates or analysis",
 })
 headers = {
   'Content-Type': 'application/json',
