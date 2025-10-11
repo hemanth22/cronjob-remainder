@@ -16,39 +16,56 @@ jobs:
             dnf install python3-pip -y
             python3 -V
             python3 -m pip install requests
+          max_auto_reruns: 3
+          auto_rerun_delay: 10s
       - run:
           name: Send Message notification to OpenShift
           command: |
             python3 fastapi_notify.py
+          max_auto_reruns: 3
+          auto_rerun_delay: 10s
       - run:
           name: Send Message notification to OpenShift Serverless Function
           command: |
             python3 fastapi_notify_water.py
+          max_auto_reruns: 3
+          auto_rerun_delay: 10s
       - run:
           name: Timesheet alert
           command: |
             python3 fastapi_timesheet.py
+          max_auto_reruns: 3
+          auto_rerun_delay: 10s
       - run:
           name: Capital Market
           command: |
             python3 fastapi_CapitalMarket.py
+          max_auto_reruns: 3
+          auto_rerun_delay: 10s
       - run:
           name: Stock Edge
           command: |
             python3 fastapi_stockedge.py
+          max_auto_reruns: 3
+          auto_rerun_delay: 10s
       - run:
           name: Soul alert
           command: |
             python3 fastapi_soul.py
-
+          max_auto_reruns: 3
+          auto_rerun_delay: 10s
       - run:
           name: Multipe alert
           command: |
             python3 fastapi_multipe.py
+          max_auto_reruns: 3
+          auto_rerun_delay: 10s
       - run:
           name: ValuePickr
           command: |
             python3 fastapi_valuepickr.py
+          max_auto_reruns: 3
+          auto_rerun_delay: 10s
 
 workflows:
   notify_app:
